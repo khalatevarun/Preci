@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "precis2a16819c": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
