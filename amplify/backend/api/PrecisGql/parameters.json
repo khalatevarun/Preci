@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "PrecisGql",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authprecis2a16819c",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
