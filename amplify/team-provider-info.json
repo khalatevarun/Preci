@@ -1,20 +1,26 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-precis-dev-210743-authRole",
-      "UnauthRoleArn": "arn:aws:iam::533715946811:role/amplify-precis-dev-210743-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::533715946811:role/amplify-precis-dev-210743-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-precis-dev-210743-deployment",
-      "UnauthRoleName": "amplify-precis-dev-210743-unauthRole",
-      "StackName": "amplify-precis-dev-210743",
-      "StackId": "arn:aws:cloudformation:us-east-1:533715946811:stack/amplify-precis-dev-210743/d8f0fb60-2dcd-11ec-a06f-0af09080b6f7",
-      "AmplifyAppId": "d2tvr0yuswqzh"
-    },
-    "categories": {
-      "auth": {
-        "precis2a16819c": {}
-      }
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-precis-dev-210743-authRole",
+            "UnauthRoleArn": "arn:aws:iam::533715946811:role/amplify-precis-dev-210743-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::533715946811:role/amplify-precis-dev-210743-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-precis-dev-210743-deployment",
+            "UnauthRoleName": "amplify-precis-dev-210743-unauthRole",
+            "StackName": "amplify-precis-dev-210743",
+            "StackId": "arn:aws:cloudformation:us-east-1:533715946811:stack/amplify-precis-dev-210743/d8f0fb60-2dcd-11ec-a06f-0af09080b6f7",
+            "AmplifyAppId": "d2tvr0yuswqzh"
+        },
+        "categories": {
+            "auth": {
+                "precis2a16819c": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2tvr0yuswqzh",
+                    "type": "manual"
+                }
+            }
+        }
     }
-  }
 }

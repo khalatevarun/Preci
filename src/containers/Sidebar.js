@@ -10,12 +10,16 @@ import {
   TextField,
   ListItemIcon,
 } from '@material-ui/core';
-import { Person as PersonIcon, Public as PublicIcon } from '@material-ui/icons';
+import {
+  Person as PersonIcon,
+  Public as PublicIcon,
+  Home as HomeIcon,
+  Search as SearchIcon,
+} from '@material-ui/icons';
 
 import { Auth, API, graphqlOperation } from 'aws-amplify';
-import { useState } from 'react';
 
-import { createPost } from '../graphql/mutations';
+import { createPostAndTimeline } from '../graphql/mutations';
 import { useHistory } from 'react-router';
 
 const drawerWidth = 340;
@@ -36,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   list: {
+    // overflowWrap: 'break-word',
     width: 300,
   },
 }));
@@ -44,9 +49,9 @@ export default function Sidebar({ activeListItem }) {
   const classes = useStyles();
   const history = useHistory();
 
-  const [value, setValue] = useState('');
-  const [isError, setIsError] = useState(false);
-  const [helperText, setHelperText] = useState('');
+  const [value, setValue] = React.useState('');
+  const [isError, setIsError] = React.useState(false);
+  const [helperText, setHelperText] = React.useState('');
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -61,13 +66,7 @@ export default function Sidebar({ activeListItem }) {
 
   const onPost = async () => {
     const res = await API.graphql(
-      graphqlOperation(createPost, {
-        input: {
-          type: 'post',
-          content: value,
-          timestamp: Math.floor(Date.now() / 1000),
-        },
-      })
+      graphqlOperation(createPostAndTimeline, { content: value })
     );
 
     console.log(res);
@@ -93,6 +92,19 @@ export default function Sidebar({ activeListItem }) {
       <List>
         <ListItem
           button
+          selected={activeListItem === 'Home'}
+          onClick={() => {
+            history.push('/');
+          }}
+          key="home"
+        >
+          <ListItemIcon>
+            <HomeIcon />
+          </ListItemIcon>
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem
+          button
           selected={activeListItem === 'global-timeline'}
           onClick={() => {
             Auth.currentAuthenticatedUser().then((user) => {
@@ -105,6 +117,21 @@ export default function Sidebar({ activeListItem }) {
             <PublicIcon />
           </ListItemIcon>
           <ListItemText primary="Global Timeline" />
+        </ListItem>
+        <ListItem
+          button
+          selected={activeListItem === 'search'}
+          onClick={() => {
+            Auth.currentAuthenticatedUser().then((user) => {
+              history.push('search');
+            });
+          }}
+          key="search"
+        >
+          <ListItemIcon>
+            <SearchIcon />
+          </ListItemIcon>
+          <ListItemText primary="Search" />
         </ListItem>
         <ListItem
           button

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "api": {
+      "PrecisGql": [
+        "create",
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}
