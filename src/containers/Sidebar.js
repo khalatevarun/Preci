@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
     flexShrink: 0,
     position: 'relative',
+    height: '100vh',
   },
   drawerPaper: {
     width: drawerWidth,

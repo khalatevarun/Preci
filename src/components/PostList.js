@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   listRoot: {
     width: '100%',
     wordBreak: 'break-all',
-    overflow: 'scroll',
+    borderLeft: '1px solid #37444C',
     borderRight: '1px solid #37444C',
   },
   alignCenter: {
