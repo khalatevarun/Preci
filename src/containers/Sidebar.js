@@ -66,6 +66,11 @@ export default function Sidebar({ activeListItem }) {
   };
 
   const onPost = async () => {
+    if (value.length === 0) {
+      setIsError(true);
+      setHelperText('Please enter the content for you post');
+      return;
+    }
     const res = await API.graphql(
       graphqlOperation(createPostAndTimeline, { content: value })
     );
