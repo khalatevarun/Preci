@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import logo from '../precis_logo.png';
 import {
   Button,
   Drawer,
@@ -21,6 +22,7 @@ import { Auth, API, graphqlOperation } from 'aws-amplify';
 
 import { createPostAndTimeline } from '../graphql/mutations';
 import { useHistory } from 'react-router';
+import { useState, useEffect } from 'react';
 
 const drawerWidth = 340;
 const MAX_POST_CONTENT_LENGTH = 140;
@@ -53,7 +55,20 @@ export default function Sidebar({ activeListItem }) {
   const [value, setValue] = React.useState('');
   const [isError, setIsError] = React.useState(false);
   const [helperText, setHelperText] = React.useState('');
+  const [currentUser, setCurrentUser] = useState('');
 
+  var hour = new Date().getHours();
+  var greetings =
+    'Good ' +
+    ((hour < 12 && 'Morning') || (hour < 18 && 'Afternoon') || 'Evening');
+
+  useEffect(() => {
+    const init = async () => {
+      const currentUser = await Auth.currentAuthenticatedUser();
+      setCurrentUser(currentUser);
+    };
+    init();
+  }, []);
   const handleChange = (event) => {
     setValue(event.target.value);
     if (event.target.value.length > MAX_POST_CONTENT_LENGTH) {
@@ -94,7 +109,12 @@ export default function Sidebar({ activeListItem }) {
       }}
       anchor="left"
     >
-      <div className={classes.toolbar} />
+      <h2
+        className="greetings"
+        style={{ marginLeft: '24px', marginBottom: '24px' }}
+      >
+        {greetings}, {currentUser?.username}
+      </h2>
       <List>
         <ListItem
           button
