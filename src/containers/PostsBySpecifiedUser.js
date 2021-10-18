@@ -134,6 +134,7 @@ export default function PostsBySpecifiedUser() {
         isLoading={isLoading}
         posts={posts}
         getAdditionalPosts={getAdditionalPosts}
+        nextToken={nextToken}
         listHeaderTitle={userId}
         listHeaderTitleButton={
           currentUser &&

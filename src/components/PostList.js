@@ -49,6 +49,7 @@ export default function PostList({
   isLoading,
   posts,
   getAdditionalPosts,
+  nextToken,
   listHeaderTitle,
   listHeaderTitleButton,
 }) {
@@ -73,24 +74,26 @@ export default function PostList({
               <Divider component="li" />
             </span>
           ))}
-          <ListItem
-            alignItems="flex-start"
-            className={classes.alignCenter}
-            key="loadmore"
-          >
-            <ListItemText
-              primary={
-                <Button
-                  variant="outlined"
-                  onClick={() => getAdditionalPosts()}
-                  className={classes.maxWidth}
-                >
-                  {' '}
-                  Read More{' '}
-                </Button>
-              }
-            />
-          </ListItem>
+          {nextToken && (
+            <ListItem
+              alignItems="flex-start"
+              className={classes.alignCenter}
+              key="loadmore"
+            >
+              <ListItemText
+                primary={
+                  <Button
+                    variant="outlined"
+                    onClick={() => getAdditionalPosts()}
+                    className={classes.maxWidth}
+                  >
+                    {' '}
+                    Read More{' '}
+                  </Button>
+                }
+              />
+            </ListItem>
+          )}
         </List>
       )}
     </div>
