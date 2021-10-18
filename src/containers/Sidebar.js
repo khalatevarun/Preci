@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    position: 'relative',
+    position: 'fixed',
   },
   toolbar: theme.mixins.toolbar,
   textField: {
