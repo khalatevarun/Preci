@@ -32,6 +32,26 @@ A simple social networking app made using ReactJS, GraphQL and AWS services.
              </ul>
    
  
+<h2>Technologies Used</h2> 
+  <li>
+   Frontend - ReactJS 
+  </li>
+                 <li>
+   Styling - Material UI and CSS 
+  </li>
+   <li>
+  Database - DynamoDB
+  </li>
+  <li>
+Authentication and Authorisation - Cogito and Amplify
+  </li>
+  <li>
+Integrations: GraphQL ( AWS AppSync )
+  </li>
+  <li>
+Compute: AWS Lambda
+  </li>
+               
 
   
 
