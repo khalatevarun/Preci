@@ -51,6 +51,13 @@ Integrations: GraphQL ( AWS AppSync )
   <li>
 Compute: AWS Lambda
   </li>
+  
+  
+  <h2>Upcoming features </h2>
+  <li>Reaction to posts - Users can react to posts by liking them.</li>
+  <li>Bookmarking posts - User can bookmark the posts they want to save for later.</li>
+  <li>Edit profile - User can edit their username and profile picture. </li>
+  
                
 
   
