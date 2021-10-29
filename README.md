@@ -43,7 +43,7 @@ A simple social networking app made using ReactJS, GraphQL and AWS services.
   Database - DynamoDB
   </li>
   <li>
-Authentication and Authorisation - Cogito and Amplify
+Authentication and Authorisation - Cognito and Amplify
   </li>
   <li>
 Integrations: GraphQL ( AWS AppSync )
