@@ -58,7 +58,7 @@ A simple social networking app made using ReactJS, GraphQL and AWS services.
   
   
   <h2>Application architecture</h2>
-   ![](https://github.com/khalatevarun/Precis/blob/main/media/application_architecture.jpg)
+   <img src="https://github.com/khalatevarun/Precis/blob/main/media/application_architecture.jpg" height="800" />
   <h2>Upcoming features </h2>
   <li>Reaction to posts - Users can react to posts by liking them.</li>
   <li>Bookmarking posts - User can bookmark the posts they want to save for later.</li>
