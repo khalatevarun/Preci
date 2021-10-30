@@ -40,7 +40,7 @@ A simple social networking app made using ReactJS, GraphQL and AWS services.
    Styling - Material UI and CSS 
   </li>
   <li>
-  Authentication - Amazon Cognitor
+  Authentication - Amazon Cognito
   </li>
   <li>
   Database - Amazon DynamoDB
