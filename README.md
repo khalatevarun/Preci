@@ -52,7 +52,8 @@ Integrations: GraphQL ( AWS AppSync )
 Compute: AWS Lambda
   </li>
   
-  
+  <h2>Application architecture</h2>
+   ![](https://github.com/khalatevarun/Precis/blob/main/media/application_architecture.png)
   <h2>Upcoming features </h2>
   <li>Reaction to posts - Users can react to posts by liking them.</li>
   <li>Bookmarking posts - User can bookmark the posts they want to save for later.</li>
