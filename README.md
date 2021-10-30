@@ -30,6 +30,8 @@ A simple social networking app made using ReactJS, GraphQL and AWS services.
     <strong>Follow/Unfollow</strong> - The users can follow other users and can see their posts on the home page. The users can unfollow as well at any point of time.
   </li>
              </ul>
+             
+ <h2>Preview</h2>
    
  
 <h2>Technologies Used</h2> 
