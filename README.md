@@ -39,18 +39,21 @@ A simple social networking app made using ReactJS, GraphQL and AWS services.
                  <li>
    Styling - Material UI and CSS 
   </li>
-   <li>
-  Database - DynamoDB
+  <li>
+  Authentication - Amazon Cognitor
   </li>
   <li>
-Authentication and Authorisation - Cognito and Amplify
+  Database - Amazon DynamoDB
   </li>
   <li>
-Integrations: GraphQL ( AWS AppSync )
+  Compute - AWS Labmda
   </li>
   <li>
-Compute: AWS Lambda
+  Hosting a managed GraphQL API - AWS AppSync
+  <li>
+  Full text search - Amazon Elasticsearch Service
   </li>
+  
   
   <h2>Application architecture</h2>
    ![](https://github.com/khalatevarun/Precis/blob/main/media/application_architecture.jpg)
