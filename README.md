@@ -30,6 +30,8 @@ A simple social networking app made using ReactJS, GraphQL and AWS services.
     <strong>Follow/Unfollow</strong> - The users can follow other users and can see their posts on the home page. The users can unfollow as well at any point of time.
   </li>
              </ul>
+             
+ <h2>Preview</h2>
    
  
 <h2>Technologies Used</h2> 
@@ -39,21 +41,24 @@ A simple social networking app made using ReactJS, GraphQL and AWS services.
                  <li>
    Styling - Material UI and CSS 
   </li>
-   <li>
-  Database - DynamoDB
+  <li>
+  Authentication - Amazon Cognito
   </li>
   <li>
-Authentication and Authorisation - Cognito and Amplify
+  Database - Amazon DynamoDB
   </li>
   <li>
-Integrations: GraphQL ( AWS AppSync )
+  Compute - AWS Labmda
   </li>
   <li>
-Compute: AWS Lambda
+  Hosting a managed GraphQL API - AWS AppSync
+  <li>
+  Full text search - Amazon Elasticsearch Service
   </li>
   
+  
   <h2>Application architecture</h2>
-   ![](https://github.com/khalatevarun/Precis/blob/main/media/application_architecture.png)
+   <img src="https://github.com/khalatevarun/Precis/blob/main/media/application_architecture.jpg" height="800" />
   <h2>Upcoming features </h2>
   <li>Reaction to posts - Users can react to posts by liking them.</li>
   <li>Bookmarking posts - User can bookmark the posts they want to save for later.</li>
