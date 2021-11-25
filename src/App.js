@@ -3,6 +3,7 @@ import Amplify from 'aws-amplify';
 import { AmplifyAuthenticator, AmplifySignUp } from '@aws-amplify/ui-react';
 import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 import awsconfig from './aws-exports';
+import Auth from '@aws-amplify/auth';
 
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ import AllPosts from './containers/AllPosts';
 import PostsBySpecifiedUser from './containers/PostsBySpecifiedUser';
 import Timeline from './containers/Timeline';
 import Search from './containers/Search';
+import './App.css';
 
 Amplify.configure(awsconfig);
 
@@ -102,16 +104,25 @@ const App = () => {
       </ThemeProvider>
     </div>
   ) : (
-    <AmplifyAuthenticator>
-      <AmplifySignUp
-        slot="sign-up"
-        formFields={[
-          { type: 'username' },
-          { type: 'password' },
-          { type: 'email' },
-        ]}
-      />
-    </AmplifyAuthenticator>
+    <div
+      style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}
+    >
+      <div className="democred-container">
+        <div>Demo Credentials</div>
+        <div>username - varun</div>
+        <div>password - password</div>
+      </div>
+      <AmplifyAuthenticator>
+        <AmplifySignUp
+          slot="sign-up"
+          formFields={[
+            { type: 'username' },
+            { type: 'password' },
+            { type: 'email' },
+          ]}
+        />
+      </AmplifyAuthenticator>
+    </div>
   );
 };
 
